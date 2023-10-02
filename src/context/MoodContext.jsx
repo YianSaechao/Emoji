@@ -1,16 +1,16 @@
 import React from 'react'
 import { createContext, useContext, useState} from 'react'
 
-MoodContext = createContext();
+const MoodContext = createContext();
 
 export const useMoodContext = () => {
 
   return useContext(MoodContext)
 };
 
-export const MoodProvider = () => {
-  const [currentMood, setCurrentMood] = useState('')
-  const [compliments, setCompliments] = useState('')
+export const MoodProvider = ({children}) => {
+  const [currentMood, setCurrentMood] = useState('neutral')
+  const [compliments, setCompliments] = useState(0)
 
   const value = {currentMood, setCurrentMood, compliments, setCompliments};
 

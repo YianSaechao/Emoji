@@ -1,8 +1,9 @@
 import React from 'react'
+import { useState } from 'react'
 import { useMoodContext } from '../../context/MoodContext'
 
 const Emojis = () => {
-    const currentMood = useMoodContext();
+    const { currentMood } = useMoodContext();
   
     let emoji = ('');
 
